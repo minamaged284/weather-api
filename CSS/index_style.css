@@ -1,0 +1,105 @@
+*{
+    font-family:sans-serif ;
+    text-decoration: none;
+}
+
+.custom-item{
+  border: 3px  solid rgba(5, 134, 187, 0); 
+
+  border-radius: 100px;
+  font-size: 12px;
+  transition: all ease-in-out .3s;
+}
+.custom-item:hover , .active{
+  border: 3px  solid rgba(5, 134, 187, 1); 
+  color:rgba(5, 134, 187, 1) !important ;
+  
+}
+.Tagline{
+  font-size: 10px;
+}
+body {
+  background-color: #1E202B;
+}
+
+#searchB{
+  border-radius: 100px;
+  background-color: #009AD8;
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  right: 5px;
+
+}
+.searchCOn{
+  padding-bottom: 12% !important;
+}
+.searchBox{
+  border-radius: 100px;
+  background-color: #1E202B;
+  border: none;
+  outline: none;
+
+}
+#search
+{
+  background-image: url(../images/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#mainDegree{
+  font-size: 110px;
+}
+.condition{
+  color: RGB(0, 154, 216)  ;
+}
+.todayCon{
+  background-color: #323544;
+
+}
+.todayHeader{
+  background-color: #2D303D;
+}
+.textColor{
+  color: RGB(191, 193, 200) ;
+}
+.tomorrowCon{
+  background-color: #262936;
+}
+.tomorrowHeader{
+  background-color: #222530;
+}
+.w-15{
+  width: 15%;
+}
+
+.afterTomorrowCon{
+  background-color: #323544;
+}
+.afterTomorrowHeader{
+  background-color: #2D303D;
+}
+.WeatherForCon{
+  border:#1E202B 5pxsolid ;
+}
+.weatherData{
+  position: relative;
+  left: 0;
+  right: 0;
+  top: -50px;
+}
+#subscribe{
+  background-color: #262936;
+}
+.icon{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #1E202B;
+  color: #009AD8;
+  transition: all .3s;
+}
+.icon:hover{
+  background-color: #009AD8;
+  color:white;
+}

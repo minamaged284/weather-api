@@ -1,0 +1,171 @@
+<html>
+    <head>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat:wght@100;400;800&family=Pacifico&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/index_style.css">
+    </head>
+    <body class="text-center position-relative p-0 m-0" onload="startup()">
+     
+      <nav class="navbar navbar-expand-lg  px-5 py-4 ">
+        <div class="container-fluid w-75 ">
+          <a class="navbar-brand d-flex text-white align-items-center" href="#">
+            <img src="images/logo@2x.png" class="img-fluid w-25 " alt="">
+            <div class="text-start ms-3">
+              <h1 class="fs-6 p-0 m-0">
+                Weather
+              </h1>
+              <p class="Tagline p-0 m-0">
+              Tagline goes here
+
+              </p>
+            </div>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto gap-4">
+              <li class="nav-item   ">
+                <a class="nav-link text-white custom-item py-0 px-3 active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item   ">
+                <a class="nav-link text-white custom-item py-0 px-3" href="#">News</a>
+              </li>
+              <li class="nav-item   ">
+                <a class="nav-link text-white custom-item py-0 px-3" href="#">Live cameras</a>
+              </li>
+              <li class="nav-item   ">
+                <a class="nav-link text-white custom-item py-0 px-3" href="#">Contact</a>
+              </li>
+        
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section class=" p-4" id="search">
+        <div class="searchCon">
+          <div class="position-relative p-0 w-75 text-center mx-auto mt-3"> 
+            <input type="text" placeholder="Find your location" class="w-100 p-3 mx-auto text-white searchBox" onkeyup="search()" id="findBox">
+            <button class="btn px-4 py-2 text-white " id="searchB">Find</button>
+          </div>
+        </div>
+    
+
+      </section>
+      <section id="WeatherFor">
+        <div class="container ">
+          <div class="row  rounded-3 WeatherForCon overflow-hidden weatherData ">
+            <div class="col-md-4 todayCon px-0 ">
+              <div class="d-flex justify-content-between todayHeader px-3 py-2 ">
+                <p class="textColor m-0" id="thisDay"></p>
+                <p class="textColor m-0" id="todaysDate">
+                </p>
+              </div>
+              <div class="p-3  text-start">
+                <p class="textColor" id="location">Cairo</p>
+                <h2 class="text-white" id="mainDegree">
+                  20<sup>o</sup>C <img src="images/113.webp" class="img-fluid w-25" alt="">
+                </h2>
+                <p class="condition mb-0" id="condition" >sunny</p>
+
+
+              </div>
+              <div class="d-flex gap-4 px-4 ">
+                <p class="textColor" id="humidity"><i class="fa-solid fa-umbrella"></i> 20%</p>
+                <p class="textColor" id="wind"><i class="fa-solid fa-wind"></i> 18km/h</p>
+                <p class="textColor" id="windDirection" ><i class="fa-regular fa-compass"></i> East</p>
+              </div>
+  
+            </div>
+            <div class="col-md-4 tomorrowCon px-0  ">
+              <div class="d-flex justify-content-between tomorrowHeader px-3 py-2 ">
+                <p class="textColor m-0 mx-auto" id="tomorrowDay">Friday</p>
+
+              </div>
+              <div class="p-3   text-center" id="tomorrowConditions">
+                
+                <img src="images/113.webp" class="img-fluid w-15 mt-4" alt="">
+                <h4 class="text-white fs-4 mt-4" >
+                  20<sup>o</sup>C 
+                </h4>
+                <h4 class="textColor fs-6 mb-4" >
+                  20<sup>o</sup>C 
+                </h4>
+                <p class="condition mb-0" >sunny</p>
+
+
+              </div>
+              
+  
+            </div>
+
+            <div class="col-md-4 tomorrowCon px-0  ">
+              <div class="d-flex justify-content-between tomorrowHeader px-3 py-2 ">
+                <p class="textColor m-0 mx-auto" id="afterTomorrowDay">Friday</p>
+
+              </div>
+              <div class="p-3   text-center" id="afterTomorrowConditions">
+                
+                <img src="images/113.webp" class="img-fluid w-15 mt-4" alt="">
+                <h4 class="text-white fs-4 mt-4" >
+                  20<sup>o</sup>C 
+                </h4>
+                <h4 class="textColor fs-6 mb-4" >
+                  20<sup>o</sup>C 
+                </h4>
+                <p class="condition mb-0" >sunny</p>
+
+
+              </div>
+              
+  
+            </div>
+            
+  
+          </div>
+        </div>
+        
+
+      </section>
+
+      <section id="subscribe" class="py-3 d-flex justify-content-center flex-column align align-items-center ">
+
+        <div class="container d-flex justify-content-around flex-md-row flex-sm-wrap align-items-center row g-2">
+            <div class="position-relative p-0  text-center mt-3 col-md-8 " id=""> 
+              <input type="text" placeholder="Enter your email to subscribe..." class="w-100 p-3 mx-auto text-white searchBox" id="">
+              <button class="btn px-4 py-2 text-white " id="searchB">subscribe</button>
+            </div>
+            <div class=" d-flex col-md-4 iconsCon gap-1 justify-content-center">
+              <a href="#" class="icon d-flex justify-content-center align-items-center text-decoration-none">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" class="icon d-flex justify-content-center align-items-center text-decoration-none">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="#" class="icon d-flex justify-content-center align-items-center text-decoration-none">
+                <i class="fa-brands fa-google-plus-g"></i>
+              </a>
+              <a href="#" class="icon d-flex justify-content-center align-items-center text-decoration-none">
+                <i class="fa-brands fa-pinterest-p"></i>
+              </a>
+
+            </div>
+          <p class="py-4 text-white ">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+
+          </div>
+         
+      </section>
+
+        <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery-3.7.1.min.js"></script>
+
+        <script src="js/index.js"></script>
+       
+    </body>
+</html>
+
+
